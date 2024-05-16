@@ -1,0 +1,55 @@
+:root {
+  --purple: #845EC2;
+  --orange : #FF9671;
+  --yellow: #FFC75F;
+}
+
+#app {
+  position: relative;
+  height: 100svh;
+  display: grid;
+  background-color: #ccc;
+}
+
+.side {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.title {
+  font-family: "Poetsen One", sans-serif;
+  font-size: 8vw;
+  width: 70vw;
+  margin: 0 15vw;
+  font-weight: bold;
+}
+
+#left-side {
+  background-color: var(--purple);
+  z-index: 2;
+  .title {
+    color: white;
+    .fancy {
+      color: var(--yellow)
+    }
+  }
+}
+
+#right-side {
+  background-color: var(--orange);
+  .title {
+    color: #111;
+    .fancy {
+      color: white;
+    }
+  }
+}
+
+.title .fancy {
+  font-family: "Lobster", cursive;
+  font-size: 1.3em;
+  line-height: .8em;
+}
